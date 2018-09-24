@@ -1,9 +1,6 @@
 package arithmetic;
 
 public class Fraction {
-	/*
-	 * a : numerator, b : denominator
-	 */
 	
 	public int a;
 	public int b;
@@ -52,8 +49,7 @@ public class Fraction {
 		if(this.a == 0) {// 0/n
 			return String.format("0");
 		}
-		
-		//this.simplify();//位置。分子为零不化简，因gcd会除０
+		//分子为零不化简，因gcd会除０
 		
 		else if(this.a >= this.b) {//  n+1/n
 			this.simplify();
@@ -94,9 +90,5 @@ public class Fraction {
 		}
 		return n;
 	}
-
-//	private static int lcm(int m, int n) {
-///		return m * n / gcd(m, n);
-//	}
 
 }
